@@ -1,1 +1,1 @@
-"# TemplateLatexUEPG" 
+# TemplateLatexUEPG

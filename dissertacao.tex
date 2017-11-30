@@ -1,0 +1,120 @@
+\documentclass[a4paper,12pt,normaltoc,capchap]{abnt}
+\usepackage{abnt-UEPG}
+\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{paralist}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{fancyvrb}
+\usepackage[alf,abnt-etal-text=it,bibjustif]{abntcite}
+\usepackage{listings}
+\usepackage{fancychap}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{tipa}
+\usepackage{array,multirow,graphicx}
+\usepackage[table,xcdraw]{xcolor}
+\renewcommand{\lstlistingname}{Código} % definição visual dos códigos fonte
+
+%%%%%%%% lista de quadros
+\usepackage{trivfloat}
+\trivfloat{quadro}
+\floatstyle{plaintop} % Forçar posição da legenda para o topo
+\restylefloat{quadro} % Forçar posição da legenda para o topo
+\addto\captionsbrazil{%
+\renewcommand{\listquadroname}{Lista de Quadros}}
+
+
+\lstset{language=Java, basicstyle=\footnotesize, numbers=left, frame=tb, breaklines=true, basicstyle=\footnotesize}
+
+%------------------------------------------------------------------------------
+% Dicionário de hifenização em português
+%------------------------------------------------------------------------------
+
+\hyphenation{pro-ces-sa-men-to}
+\hyphenation{a-pre-sen-ta-da}
+\hyphenation{pro-gra-ma}
+%------------------------------------------------------------------------------
+% Configurações da dissertação
+%------------------------------------------------------------------------------
+
+
+\instituicao{UNIVERSIDADE ESTADUAL DE PONTA GROSSA\\
+PRÓ-REITORIA DE PESQUISA E PÓS-GRADUAÇÃO\\
+PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIAS BIOMÉDICAS\\ }
+
+\autor{AUTOR AUTOR AUTOR}
+
+\titulo{TITURLO TITULO}
+
+\comentario{Dissertação apresentada para obtenção do título de Mestre em Ciências Biomédicas na Universidade Estadual de Ponta Grossa, Área de concentração: Fisiopatologia do sistema imune. \\ \\ Orientador: Prof. Dr. Tal \\ Co-orientador: Prof. MSc. Tal}
+
+\local{Ponta Grossa}
+
+\data{2017}
+
+%------------------------------------------------------------------------------
+% Início do documento 
+%------------------------------------------------------------------------------
+
+\begin{document}
+
+\capa
+
+\folhaderosto
+%\include{agradecimentos2}
+\include{dedicatoria}
+\include{agradecimentos}
+\include{resumo}
+\include{resumo-abstract}
+\listadesiglas
+\listadefiguras
+\listadetabelas
+%\listofquadros
+\sumario
+
+\pagestyle{headings}
+
+\lhead{\centering \nouppercase{\rightmark}}
+\rhead{\centering \nouppercase{\leftmark}}
+\pagestyle{fancy}
+\fancyfoot{}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. \ #1}{}}
+\fancyhead[LE, RO]{ \thepage}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot{}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{10}
+\include{introducao}
+\include{objetivo}
+\include{revisao}
+\include{metodologia}
+\include{resultados}
+\include{discussao}
+\include{conclusoes}
+
+\bibliographystyle{abnt-alf}
+\bibliography{base}
+
+%\include{Apendice}
+\include{anexo}
+
+\end{document}
+
+%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%% Fim do documento
+%%%%%%%%%%%%%%%
