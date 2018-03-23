@@ -1,45 +1,22 @@
-\appendix
-%Apendice A -----------------------------------------------------------------------------------------------------
-\chapter{Resultados dos Tempos de Execução}
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
 
-\section{Ferramenta \textit{Fast Weka}}
-A ferramenta \textit{Fast Weka} tem também como objetivo ser de fácil utilização a todos aqueles que necessitam de uma ferramenta de mineração de dados, ou que já utilizam a ferramenta Weka, mas que tem suas tarefas de mineração demandando de um alto tempo de execução e buscam melhor desempenho.
+% Imprime uma página indicando o início dos apêndices
+\partapendices
 
-Assim, como principal e única mudança visual realizada na ferramenta Weka, ocorreu a criação de uma tela inicial de configuração, onde são definidas as configurações de execução concorrente ou paralela, conforme a figura \ref{fig:telainicial}.
+% ----------------------------------------------------------
+\chapter{Quisque libero justo}
+% ----------------------------------------------------------
 
-\begin{figure}[h!]
+\lipsum[50]
 
-\centering
-\caption{Tela Inicial \textit{Fast Weka}}
+% ----------------------------------------------------------
+\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+% ----------------------------------------------------------
+\lipsum[55-57]
 
-\includegraphics[width=0.8\textwidth,natwidth=610,natheight=642]{wekap2p.png}
-
-\text{\footnotesize Fonte: O autor}
-\label{fig:telainicial}
-\end{figure}
-
-Está tela é carregada toda vez que o programa é iniciado com a execução do arquivo fastweka.jar, ou por meio da linha de comando:
-\begin{Verbatim}[frame=single]
-java -cp fastweka.jar weka.gui.GUIChooser
-\end{Verbatim}
-
-Por padrão, a opção \textit{Application Running Locally} está pré-selecionada, que é utilizada quando deseja-se uma execução concorrente na maquina em questão (modo multi-\textit{threads}), o campo \textit{Number of Concurrent Requests} inicializa com o número máximo de núcleos do computador, considerando os núcleos reais e virtuais, podendo receber um valor entre um e o número máximo de núcleos do computador, o qual vai delimitar o número de execuções concorrente (\textit{Threads}).
-
-A segunda opção disponível é \textit{Application Running on the P2P Network}, quando deseja-se realizar uma execução de modo paralelo com redes P2P, com está opção selecionada o campo citado acima é desabilitado e são habilitados os campos: \textit{IP/Name Rendezvous}, \textit{IP/Name Relay}, os dois campos \textit{Port} e também o campo \textit{Number of Peers}.
-
-O campo \textit{Number of Peers} é responsável por definir o número de pares da rede P2P, os quais devem estar disponíveis para a execução das tarefas de mineração de dados, o mesmo aceita valores entre 2 até N.  Os outros campos supracitados, identificam os endereços de IP/Nome e Porta, do \textit{Rendezvous} e \textit{Relay} que são responsáveis pela concentração dos anúncios e informações de roteamento, respectivamente, podendo os dois estarem definidos no mesmo endereço.
-
-Para iniciar a aplicação em modo \textit{Rendezvous}/\textit{Relay} deve-se utilizar o fastweka.jar por meio da linha de comando:
-\begin{Verbatim}[frame=single]
-java -cp fastweka.jar weka.p2p.RunRendezvous
-\end{Verbatim}
-
-Com os pares da rede P2P, também deve ser usado o fastweka.jar, porém com a linha de comando:
-\begin{Verbatim}[frame=single]
-java -cp fastweka.jar weka.p2p.StartPeer
-\end{Verbatim}
-
-Para que os pares encontrem o endereço do \textit{Rendezvous} e \textit{Relay}, e necessário que existam os arquivos: relay.txt e seeds.txt, no mesmo diretório onde encontra-se o arquivo fastweka.jar, contendo a informação do IP/Nome e Porta (tcp://IP/Nome:Porta), onde estão localizados os mesmo, exemplo:
-\begin{Verbatim}[frame=single]
-tcp://localhost:9701
-\end{Verbatim}
+\end{apendicesenv}
+% ---
